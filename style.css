@@ -58,7 +58,7 @@
     margin:10px;
     margin-left:50px;
 }
-#days{
+#days1,#days2,#days3{
     width: 200px;
     height: 35px;
     font-size: 20px;
@@ -67,7 +67,7 @@
     margin-left:60px;
 
 }
-#time{
+#time1,#time2,#time3{
     width: 200px;
     height: 35px;
     font-size: 20px;
