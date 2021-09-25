@@ -56,8 +56,6 @@ function myFunction(param) {
              index+=3;
              d+=4;
              t+=4;
-             console.log(d);
-             console.log(t);
          }
      }
 
