@@ -14,6 +14,14 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding-top: 5px;
 }
+.title1{
+    width: 15%;
+    float: left;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-top: 5px;
+    margin-left: 5px;
+}
 .input{
     margin-left: 100px;
     width: 150px;
@@ -58,21 +66,21 @@
     margin-left:50px;
 }
 #days1,#days2,#days3{
-    width: 150px;
+    width: 120px;
     height: 35px;
     font-size: 20px;
     margin-bottom: 5px;
     margin:10px;
     margin-left:60px;
-
+    padding-left: 10px;
 }
 #time1,#time2,#time3{
-    width: 180px;
+    width: 160px;
     height: 35px;
     font-size: 20px;
     margin-bottom: 5px;
     margin:10px;
-    margin-left:80px;
-    margin-right: 60px;
+    margin-left:10px;
+    padding-left: 10px;
 
 }
