@@ -42,11 +42,11 @@ function myFunction() {
      console.log(checkBox);
     if(checkBox){
         var v=document.getElementById("l1").disabled = false;
-        var v=document.getElementById("l2").disabled = false;
+        var v=document.getElementById("l11").disabled = false;
     }
     else{
         var v=document.getElementById("l1").disabled = true;
-        var v=document.getElementById("l2").disabled = true;
+        var v=document.getElementById("l11").disabled = true;
     }
     
   }
