@@ -51,8 +51,7 @@ background-color: blue;
     float:left;
     text-align: left;
 }
-.buttons{
-    width: 50%;
-    float: left;
-    margin-right: 00px;
+#flexCheckDefault{
+    width: 50px;
+    height: 25px;
 }
