@@ -43,6 +43,7 @@
     width: 100%;
     margin-top: 10px;
     background-image: url("bc.jpg");
+    text-align: center;
 }
 #sec1{
     background-color: #ff2052;
@@ -57,7 +58,7 @@
     margin-left:50px;
 }
 #days1,#days2,#days3{
-    width: 200px;
+    width: 150px;
     height: 35px;
     font-size: 20px;
     margin-bottom: 5px;
@@ -66,7 +67,7 @@
 
 }
 #time1,#time2,#time3{
-    width: 200px;
+    width: 180px;
     height: 35px;
     font-size: 20px;
     margin-bottom: 5px;
