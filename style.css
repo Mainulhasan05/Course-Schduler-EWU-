@@ -45,9 +45,14 @@ background-color: blue;
     font-size: 30px;
     text-align: center;
 }
-#Lab,#l1,#l11{
+#Lab,#l1{
     text-align: left;
     width: 50%;
     float:left;
     text-align: left;
+}
+.buttons{
+    width: 50%;
+    float: left;
+    margin-right: 00px;
 }
