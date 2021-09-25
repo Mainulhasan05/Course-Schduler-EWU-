@@ -1,35 +1,34 @@
 .head{
     width: 100%;
-    height: 130px;
+    height: 80px;
     margin-bottom: 0px;
+    background-image: url("bc.jpg");
+    text-align: center;
+    padding: 20px;
 }
 .border{
     background-color: teal;
     height: 10px;
 }
-.title{
-    width: 15%;
-    float: left;
-    text-align: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    padding-top: 5px;
-}
-.title1{
-    width: 15%;
-    float: left;
-    text-align: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    padding-top: 5px;
-    margin-left: 5px;
-}
-.input{
-    margin-left: 100px;
-    width: 150px;
-    height: 40px;
-    font-size: 30px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
 
+.sections{
+    width: 100%;
+    float:left;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-image: url("bc.jpg");
+}
+.div1{
+    width: 15%;
+    float: left;
+    text-align: center;
+    margin:5px;
+    padding-bottom: 5px;
+}
+.div2{
+background-color: blue;
+}
 #btn{
     border: none;
     background-color: yellow;
@@ -46,42 +45,9 @@
     font-size: 30px;
     text-align: center;
 }
-.sections{
+#Lab,#l1,#l2{
+    text-align: left;
+    width: 50%;
     float:left;
-    width: 100%;
-    margin-top: 10px;
-    background-image: url("bc.jpg");
-    text-align: center;
-}
-#sec1{
-    background-color: #ff2052;
-}
-#inputId{
-    margin-bottom: 5px;
-    margin:10px;
-}
-#inputIdSec{
-    margin-bottom: 5px;
-    margin:10px;
-    margin-left:50px;
-}
-#days1,#days2,#days3{
-    width: 120px;
-    height: 35px;
-    font-size: 20px;
-    margin-bottom: 5px;
-    margin:10px;
-    margin-left:60px;
-    padding-left: 10px;
-}
-#time1,#time2,#time3{
-    width: 160px;
-    height: 35px;
-    font-size: 20px;
-    margin-bottom: 5px;
-    margin:10px;
-    margin-left:10px;
-    padding-left: 10px;
-    background-color: greenyellow;
-
+    text-align: left;
 }

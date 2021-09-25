@@ -1,7 +1,5 @@
 
 
-
-
 function btnClicked(){
     var x1=document.getElementById("time1").value;
 var y1=document.getElementById("days1").value;
@@ -25,21 +23,12 @@ var obj=[];
         for(var j=i+1; j<3; j++){
             if(obj[i].time==obj[j].time && obj[i].days==obj[j].days){
                 conflict[flag]="obj"+(i+1)+" & obj"+(j+1)+" conflicts <br>";
-                console.log("obj"+(i+1)+" & obj"+(j+1)+" conflicts");
                 flag++;
             }
         }
     }
 
-    /*console.log("hi, there");
-    console.log(obj[0].time);
-    console.log(obj[0].days);
-    var x = document.getElementById("days1").value;
-    console.log(x);
-    var s="";
-    for(var i=1; i<=10; i++){
-        s+=i+" x "+x+" = "+(i*x)+"<br>";
-    }*/
+    
     var s="Congratulations, There is no conflicts.";
     if(flag==0)
     document.getElementById("output").innerHTML=s;
@@ -47,3 +36,17 @@ var obj=[];
         document.getElementById("output").innerHTML=conflict;
     }
 }
+
+function myFunction() {
+     var checkBox= document.getElementById("flexCheckDefault").checked;
+     console.log(checkBox);
+    if(checkBox){
+        var v=document.getElementById("l1").disabled = false;
+        var v=document.getElementById("l2").disabled = false;
+    }
+    else{
+        var v=document.getElementById("l1").disabled = true;
+        var v=document.getElementById("l2").disabled = true;
+    }
+    
+  }
