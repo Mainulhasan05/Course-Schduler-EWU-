@@ -112,16 +112,68 @@ var obj=[];
     //console.log(obj[0].days);
     return out;
 }
-function labDayConflict(){
+function labDayConflict(){//akta course er sathe arektar lab conflict check
     const labObj=document.querySelectorAll("select");
 let whichOne=document.querySelectorAll("input");
 //console.log(whichOne[2].checked);
 let out="";
-let chkx=2,chky=5,dx=2,tx=3,dy=6,ty=7;
-
+let chkx=2;
+let chky=0; let dx=2; let tx=3; let dy=0; let ty=0;
+let unknown,dayy,timey;
 for(let x=0; x<3-1; x++){
-    for(let y=x+1; y<3-1; y++){
-        if(whichOne[chkx].checked && whichOne[chky].checked){//checking if both are checked
+    if(whichOne[chkx].checked){
+        chky=chkx; dy=dx;ty=tx;
+        for(let y=x+1; y<3; y++){
+             chky+=3;
+             dy+=4;
+             ty+=4;
+            if(whichOne[chky].checked){
+                if(labObj[dx].value==labObj[dy].value){
+                    if((labObj[tx].value==1 &&labObj[ty].value==1)||(labObj[tx].value==1 &&labObj[ty].value==2)){
+                        out+="Course"+(x+1)+" and Course"+(y+1)+" Lab time conflicts<br>"
+                        console.log(out+"x = "+x+" y ="+y+" chky "+chky+" dy "+dy+" ty "+ty);
+                    }
+                    else if((labObj[tx].value==2 &&labObj[ty].value==2)||(labObj[tx].value==2 &&labObj[ty].value==3)){
+                        out+="Course"+(x+1)+" and Course"+(y+1)+" Lab time conflicts<br>"
+                        console.log(out+"x = "+x+" y ="+y+" chky "+chky+" dy "+dy+" ty "+ty);
+                        
+                    }
+                    else if((labObj[tx].value==3 &&labObj[ty].value==3)||(labObj[tx].value==3 &&labObj[ty].value==4)){
+                        out+="Course"+(x+1)+" and Course"+(y+1)+" Lab time conflicts<br>"
+                        console.log(out+"x = "+x+" y ="+y+" chky "+chky+" dy "+dy+" ty "+ty);
+                    }
+                    else if(labObj[tx].value==4 &&labObj[ty].value==4){
+                        out+="Course"+(x+1)+" and Course"+(y+1)+" Lab time conflicts<br>"
+                        console.log(out+"x = "+x+" y ="+y+" chky "+chky+" dy "+dy+" ty "+ty);
+                    }
+                    else if((labObj[tx].value==5 &&labObj[ty].value==5)||(labObj[tx].value==5 &&labObj[ty].value==6)){
+                        out+="Course"+(x+1)+" and Course"+(y+1)+" Lab time conflicts<br>"
+                        console.log(out+"x = "+x+" y ="+y+" chky "+chky+" dy "+dy+" ty "+ty);
+                    }
+                }
+                // chky+=3;
+                // dy+=4;
+                // ty+=4;
+            }
+            else{
+                chky+=3;
+                dy+=4;
+                ty+=4;
+            }
+        }
+        chkx+=3;
+        dx+=4;
+        tx+=4;
+    }
+    else{
+        chkx+=3;
+        dx+=4;
+        tx+=4;
+    }
+    
+}      
+
+        /*if(whichOne[chkx].checked && whichOne[chky].checked){//checking if both are checked
             if(labObj[dx].value==labObj[dy].value){//checking if days are same
                 console.log("same day");
                 console.log(labObj[tx].value+" =tx  , ty="+labObj[ty].value)
@@ -146,9 +198,7 @@ for(let x=0; x<3-1; x++){
             // chkx+=3;
             // dx+=4;
             // tx+=4;
-            chky+=3;
-            dy+=4;
-            ty+=4;
+
 
         }
         else{
@@ -158,18 +208,17 @@ for(let x=0; x<3-1; x++){
             ty+=4;
         }
     }
-    chkx+=3;
-    dx+=4;
-    tx+=4;
-}
+*/
+
 //console.log(out);
+return out;
 }
 
 function btnClicked(){
 let finalOutput="";
 finalOutput+=classCheck();
 finalOutput+=String(labCheck());
-labDayConflict();
+finalOutput+=String(labDayConflict());
 if(finalOutput.length==0){
     finalOutput="Congratulations, No conflicts with this schedule.";
 }
@@ -213,4 +262,4 @@ function myFunction(param) {
 /* for lab needed indexs {2,3} ,{6,7}, {10,11} labobj*/
 
 
-  }
+}
