@@ -119,7 +119,7 @@ let finalOutput="";
 finalOutput+=classCheck();
 finalOutput+=String(labCheck());
 if(finalOutput.length==0){
-    finalOutput="Congratulations,No conflicts with this schedule.";
+    finalOutput="Congratulations, No conflicts with this schedule.";
 }
 //validityCheck();
 document.getElementById("output").innerHTML=finalOutput;
