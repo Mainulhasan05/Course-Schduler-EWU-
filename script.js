@@ -147,7 +147,7 @@ for(let x=0; x<3-1; x++){
                         out+="Course"+(x+1)+" and Course"+(y+1)+" Lab time conflicts<br>"
                         //console.log(out+"x = "+x+" y ="+y+" chky "+chky+" dy "+dy+" ty "+ty);
                     }
-                    else if((labObj[tx].value==2 &&labObj[ty].value==2)||(labObj[tx].value==2 &&labObj[ty].value==3)){
+                    else if((labObj[tx].value==2 &&labObj[ty].value==2)||(labObj[tx].value==2 &&labObj[ty].value==1)||(labObj[tx].value==2 &&labObj[ty].value==3)){
                         out+="Course"+(x+1)+" and Course"+(y+1)+" Lab time conflicts<br>"
                         
                         
