@@ -1,12 +1,20 @@
 function validityCheck(){
-    let index=2;
+    let index=2,i=2,j=3;
     var whichOne=document.querySelectorAll("input");
-    for(let x=0; x<whichOne.length; x++){
+    const labObj=document.querySelectorAll("select"); //2,3  6,7   10,11
+    for(let x=0; x<3; x++){
         if(whichOne[index].checked){
-            //
+            //whichone index 2,5,8
+            if(labObj[i].value=='Day' ||labObj[i].value=='Time'){
+                alert("Please select Lab"+(x+1)+"-> day and time");
+                return true;
+            }
         }
         index+=3;
+        i+=4;
+        j+=4;
     }
+    return false;
 }
 function classCheck(){
 let x1=document.getElementById("time1").value;
@@ -221,15 +229,20 @@ return out;
 }
 
 function btnClicked(){
-let finalOutput="";
-finalOutput+=classCheck();
-finalOutput+=String(labCheck());
-finalOutput+=String(labDayConflict());
-if(finalOutput.length==0){
-    finalOutput="Congratulations, No conflicts with this schedule.";
-}
-//validityCheck();
-document.getElementById("output").innerHTML=finalOutput;
+    if(validityCheck()){
+        
+    }else{
+        let finalOutput="";
+        finalOutput+=classCheck();
+        finalOutput+=String(labCheck());
+        finalOutput+=String(labDayConflict());
+        if(finalOutput.length==0){
+            finalOutput="Congratulations, No conflicts with this schedule.";
+        }
+        
+        document.getElementById("output").innerHTML=finalOutput;
+    }
+
 
 }
 /*checkbox indexs 2,5,8  */
