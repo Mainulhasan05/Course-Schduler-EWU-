@@ -123,37 +123,38 @@ let unknown,dayy,timey;
 for(let x=0; x<3-1; x++){
     if(whichOne[chkx].checked){
         chky=chkx; dy=dx;ty=tx;
+        chky+=3;
+        dy+=4;
+        ty+=4;
         for(let y=x+1; y<3; y++){
-             chky+=3;
-             dy+=4;
-             ty+=4;
+
             if(whichOne[chky].checked){
                 if(labObj[dx].value==labObj[dy].value){
                     if((labObj[tx].value==1 &&labObj[ty].value==1)||(labObj[tx].value==1 &&labObj[ty].value==2)){
                         out+="Course"+(x+1)+" and Course"+(y+1)+" Lab time conflicts<br>"
-                        console.log(out+"x = "+x+" y ="+y+" chky "+chky+" dy "+dy+" ty "+ty);
+                        //console.log(out+"x = "+x+" y ="+y+" chky "+chky+" dy "+dy+" ty "+ty);
                     }
                     else if((labObj[tx].value==2 &&labObj[ty].value==2)||(labObj[tx].value==2 &&labObj[ty].value==3)){
                         out+="Course"+(x+1)+" and Course"+(y+1)+" Lab time conflicts<br>"
-                        console.log(out+"x = "+x+" y ="+y+" chky "+chky+" dy "+dy+" ty "+ty);
+                        
                         
                     }
-                    else if((labObj[tx].value==3 &&labObj[ty].value==3)||(labObj[tx].value==3 &&labObj[ty].value==4)){
+                    else if((labObj[tx].value==3 &&labObj[ty].value==3)||(labObj[tx].value==3 &&labObj[ty].value==4)||(labObj[tx].value==3 &&labObj[ty].value==2)){
                         out+="Course"+(x+1)+" and Course"+(y+1)+" Lab time conflicts<br>"
-                        console.log(out+"x = "+x+" y ="+y+" chky "+chky+" dy "+dy+" ty "+ty);
+                        
                     }
-                    else if(labObj[tx].value==4 &&labObj[ty].value==4){
+                    else if((labObj[tx].value==4 &&labObj[ty].value==4)||(labObj[tx].value==4 &&labObj[ty].value==2)){
                         out+="Course"+(x+1)+" and Course"+(y+1)+" Lab time conflicts<br>"
-                        console.log(out+"x = "+x+" y ="+y+" chky "+chky+" dy "+dy+" ty "+ty);
+                        
                     }
                     else if((labObj[tx].value==5 &&labObj[ty].value==5)||(labObj[tx].value==5 &&labObj[ty].value==6)){
                         out+="Course"+(x+1)+" and Course"+(y+1)+" Lab time conflicts<br>"
-                        console.log(out+"x = "+x+" y ="+y+" chky "+chky+" dy "+dy+" ty "+ty);
+                        
                     }
                 }
-                // chky+=3;
-                // dy+=4;
-                // ty+=4;
+                chky+=3;
+                dy+=4;
+                ty+=4;
             }
             else{
                 chky+=3;
