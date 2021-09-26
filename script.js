@@ -315,6 +315,8 @@ function createNew(){
     if(total==3){
         var neww=document.getElementById("new1");
         neww.style.display="block";
+        var neww=document.getElementById("removebtn");
+        neww.style.display="block";
         total++;
     }
     else if(total==4){
@@ -326,4 +328,19 @@ function createNew(){
         alert("Can't add more than 5 rows");
     }
     
+}
+
+function remove(){
+    if(total==4){
+        var neww=document.getElementById("new1");
+        neww.style.display="none";
+        var neww=document.getElementById("removebtn");
+        neww.style.display="none";
+        total--;
+    }
+    else{
+        var neww=document.getElementById("new2");
+        neww.style.display="none";
+        total--;
+    }
 }
