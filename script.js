@@ -1,8 +1,10 @@
+var total=3;
+
 function validityCheck(){
     let index=2,i=2,j=3;
     var whichOne=document.querySelectorAll("input");
     const labObj=document.querySelectorAll("select"); //2,3  6,7   10,11
-    for(let x=0; x<3; x++){
+    for(let x=0; x<total; x++){
         if(whichOne[index].checked){
             //whichone index 2,5,8
             if(labObj[i].value=='Day' ||labObj[i].value=='Time'){
@@ -26,6 +28,12 @@ let y2=document.getElementById("days2").value;
 let x3=document.getElementById("time3").value;
 let y3=document.getElementById("days3").value;
 
+let x4=document.getElementById("time4").value;
+let y4=document.getElementById("days4").value;
+
+let x5=document.getElementById("time5").value;
+let y5=document.getElementById("days5").value;
+
 
 var obj=[];
  obj[0]={time:x1,
@@ -34,9 +42,14 @@ var obj=[];
         days:y2};
  obj[2]={time:x3,
             days:y3};
+ obj[3]={time:x4,
+                days:y4};
+ obj[4]={time:x5,
+                days:y5};
+
         let flag=0,conflict=[];
-    for(var i=0; i<2; i++){
-        for(var j=i+1; j<3; j++){
+    for(var i=0; i<total-1; i++){
+        for(var j=i+1; j<total; j++){
             if(obj[i].time==obj[j].time && ((String(obj[i].days).includes(obj[j].days[0]) ||  String(obj[i].days).includes(obj[j].days[1])))){
                 conflict[flag]="Course"+(i+1)+" & Course"+(j+1)+" class time conflicts <br>";
                 flag++;
@@ -67,6 +80,12 @@ let y2=document.getElementById("days2").value;
 let x3=document.getElementById("time3").value;
 let y3=document.getElementById("days3").value;
 
+let x4=document.getElementById("time4").value;
+let y4=document.getElementById("days4").value;
+
+let x5=document.getElementById("time5").value;
+let y5=document.getElementById("days5").value;
+
 const labObj=document.querySelectorAll("select");
 let whichOne=document.querySelectorAll("input");
 var obj=[];
@@ -76,15 +95,20 @@ var obj=[];
         days:y2};
  obj[2]={time:x3,
             days:y3};
+  obj[3]={time:x4,
+                days:y4};
+ obj[4]={time:x5,
+                days:y5};
+
         let flag=0,conflict=[];
     let chk=2;     let d=2,t=3;
     let out="";
-    for(let w=0; w<3; w++){
+    for(let w=0; w<total; w++){
         if(whichOne[chk].checked){
            // console.log(labObj[d].value);//{2,3} ,{6,7}, {10,11} labobj Lab day,time
            // console.log(labObj[t].value);
 console.log("3 number check korte aschi");
-            for(let pp=0; pp<3; pp++){
+            for(let pp=0; pp<total; pp++){
                 var s=String(obj[pp].days);
                 console.log(labObj[d].value);
                 console.log(s);
@@ -136,14 +160,14 @@ let out="";
 let chkx=2;
 let chky=0; let dx=2; let tx=3; let dy=0; let ty=0;
 let unknown,dayy,timey;
-for(let x=0; x<3-1; x++){
+for(let x=0; x<total-1; x++){
     if(whichOne[chkx].checked){
         console.log("for 3 number chkx "+chkx);
         chky=chkx; dy=dx;ty=tx;
         chky+=3;
         dy+=4;
         ty+=4;
-        for(let y=x+1; y<3; y++){
+        for(let y=x+1; y<total; y++){
 
             if(whichOne[chky].checked){
                 console.log("for 3 number");
@@ -285,6 +309,21 @@ function myFunction(param) {
 
 
 /* for lab needed indexs {2,3} ,{6,7}, {10,11} labobj*/
+}
 
-
+function createNew(){
+    if(total==3){
+        var neww=document.getElementById("new1");
+        neww.style.display="block";
+        total++;
+    }
+    else if(total==4){
+        var neww=document.getElementById("new2");
+        neww.style.display="block";
+        total++;
+    }
+    else{
+        alert("Can't add more than 5 rows");
+    }
+    
 }
