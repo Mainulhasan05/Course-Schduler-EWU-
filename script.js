@@ -29,7 +29,7 @@ var obj=[];
         let flag=0,conflict=[];
     for(var i=0; i<2; i++){
         for(var j=i+1; j<3; j++){
-            if(obj[i].time==obj[j].time && obj[i].days==obj[j].days){
+            if(obj[i].time==obj[j].time && ((String(obj[i].days).includes(obj[j].days[0]) ||  String(obj[i].days).includes(obj[j].days[1])))){
                 conflict[flag]="Course"+(i+1)+" & Course"+(j+1)+" class time conflicts <br>";
                 flag++;
             }
@@ -85,16 +85,16 @@ var obj=[];
                    // console.log("lab time "+labObj[t].value);
                     if((tm==1 && labObj[t].value==1)||(tm==1 && labObj[t].value==2)){
                         //console.log("Course "+(pp+1)+" no  er sathe Course "+(w+1) +" no er Lab conflict kore");
-                        out+="Course "+(pp+1)+"  classtime conflicts with Course"+(w+1) +"  Lab time<br>";
+                        out+="Course"+(pp+1)+"  classtime conflicts with Course"+(w+1) +"  Lab time<br>";
                     }
                     else if((tm==2 && labObj[t].value==3)||(tm==2 && labObj[t].value==4)){
-                        out+="Course "+(pp+1)+"  classtime conflicts with Course"+(w+1) +"  Lab time<br>";
+                        out+="Course"+(pp+1)+"  classtime conflicts with Course"+(w+1) +"  Lab time<br>";
                     }
                     else if(tm==3 && labObj[t].value==4){
-                        out+="Course "+(pp+1)+"  classtime conflicts with Course"+(w+1) +"  Lab time<br>";
+                        out+="Course"+(pp+1)+"  classtime conflicts with Course"+(w+1) +"  Lab time<br>";
                     }
                     else if(tm==4 && labObj[t].value==5){
-                        out+="Course "+(pp+1)+"  classtime conflicts with Course"+(w+1) +"  Lab time<br>";
+                        out+="Course"+(pp+1)+"  classtime conflicts with Course"+(w+1) +"  Lab time<br>";
                     }
                 }
             }
@@ -112,12 +112,64 @@ var obj=[];
     //console.log(obj[0].days);
     return out;
 }
+function labDayConflict(){
+    const labObj=document.querySelectorAll("select");
+let whichOne=document.querySelectorAll("input");
+//console.log(whichOne[2].checked);
+let out="";
+let chkx=2,chky=5,dx=2,tx=3,dy=6,ty=7;
 
+for(let x=0; x<3-1; x++){
+    for(let y=x+1; y<3-1; y++){
+        if(whichOne[chkx].checked && whichOne[chky].checked){//checking if both are checked
+            if(labObj[dx].value==labObj[dy].value){//checking if days are same
+                console.log("same day");
+                console.log(labObj[tx].value+" =tx  , ty="+labObj[ty].value)
+                if((labObj[tx].value==1 &&labObj[ty].value==1)||(labObj[tx].value==1 &&labObj[ty].value==2)){
+                    out+="Course"+(x+1)+" and Course"+(y+1)+" Lab time conflicts<br>"
+                    console.log(out);
+                }
+                else if((labObj[tx].value==3 &&labObj[ty].value==3)||(labObj[tx].value==3 &&labObj[ty].value==4)){
+                    out+="Course"+(x+1)+" and Course"+(y+1)+" Lab time conflicts<br>"
+                    console.log(out);
+                }
+                else if(labObj[tx].value==4 &&labObj[ty].value==4){
+                    out+="Course"+(x+1)+" and Course"+(y+1)+" Lab time conflicts<br>"
+                    console.log(out);
+                }
+                else if((labObj[tx].value==5 &&labObj[ty].value==5)||(labObj[tx].value==5 &&labObj[ty].value==6)){
+                    out+="Course"+(x+1)+" and Course"+(y+1)+" Lab time conflicts<br>"
+                    console.log(out);
+                }
+                
+            }
+            // chkx+=3;
+            // dx+=4;
+            // tx+=4;
+            chky+=3;
+            dy+=4;
+            ty+=4;
+
+        }
+        else{
+
+            chky+=3;
+            dy+=4;
+            ty+=4;
+        }
+    }
+    chkx+=3;
+    dx+=4;
+    tx+=4;
+}
+//console.log(out);
+}
 
 function btnClicked(){
 let finalOutput="";
 finalOutput+=classCheck();
 finalOutput+=String(labCheck());
+labDayConflict();
 if(finalOutput.length==0){
     finalOutput="Congratulations, No conflicts with this schedule.";
 }
