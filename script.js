@@ -83,11 +83,14 @@ var obj=[];
         if(whichOne[chk].checked){
            // console.log(labObj[d].value);//{2,3} ,{6,7}, {10,11} labobj Lab day,time
            // console.log(labObj[t].value);
-
+console.log("3 number check korte aschi");
             for(let pp=0; pp<3; pp++){
                 var s=String(obj[pp].days);
+                console.log(labObj[d].value);
+                console.log(s);
                 if(s[0]==labObj[d].value || s[1]==labObj[d].value){
                    // console.log((pp+1)+" no row er sathe "+(w+1) +" no Lab day milse");
+                   console.log("din to mil peye gelam");
                     var tm=obj[pp].time;
                     //console.log("class tm "+tm);
                    // console.log("lab time "+labObj[t].value);
@@ -135,6 +138,7 @@ let chky=0; let dx=2; let tx=3; let dy=0; let ty=0;
 let unknown,dayy,timey;
 for(let x=0; x<3-1; x++){
     if(whichOne[chkx].checked){
+        console.log("for 3 number chkx "+chkx);
         chky=chkx; dy=dx;ty=tx;
         chky+=3;
         dy+=4;
@@ -142,12 +146,13 @@ for(let x=0; x<3-1; x++){
         for(let y=x+1; y<3; y++){
 
             if(whichOne[chky].checked){
+                console.log("for 3 number");
                 if(labObj[dx].value==labObj[dy].value){
                     if((labObj[tx].value==1 &&labObj[ty].value==1)||(labObj[tx].value==1 &&labObj[ty].value==2)){
                         out+="Course"+(x+1)+" and Course"+(y+1)+" Lab time conflicts<br>"
                         //console.log(out+"x = "+x+" y ="+y+" chky "+chky+" dy "+dy+" ty "+ty);
                     }
-                    else if((labObj[tx].value==2 &&labObj[ty].value==2)||(labObj[tx].value==2 &&labObj[ty].value==1)||(labObj[tx].value==2 &&labObj[ty].value==3)){
+                    else if((labObj[tx].value==2 &&labObj[ty].value==2)||(labObj[tx].value==2 &&labObj[ty].value==1)||(labObj[tx].value==2 &&labObj[ty].value==3)||(labObj[tx].value==2 &&labObj[ty].value==4)){
                         out+="Course"+(x+1)+" and Course"+(y+1)+" Lab time conflicts<br>"
                         
                         
@@ -174,6 +179,7 @@ for(let x=0; x<3-1; x++){
                 dy+=4;
                 ty+=4;
             }
+            console.log("chky "+chky+" dy "+dy+" ty="+ty);
         }
         chkx+=3;
         dx+=4;
