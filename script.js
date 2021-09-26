@@ -95,6 +95,11 @@ var obj=[];
                     }
                     else if(tm==4 && labObj[t].value==5){
                         out+="Course"+(pp+1)+"  classtime conflicts with Course"+(w+1) +"  Lab time<br>";
+                        
+                    }
+                    else if(tm==5 && labObj[t].value==5){
+                        out+="Course"+(pp+1)+"  classtime conflicts with Course"+(w+1) +"  Lab time<br>";
+                        
                     }
                 }
             }
