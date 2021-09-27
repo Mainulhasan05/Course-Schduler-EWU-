@@ -271,7 +271,7 @@ function btnClicked(){
             document.getElementById("output").style.backgroundColor="greenyellow";
         }
         else{
-            document.getElementById("output").style.backgroundColor="255,148,148";
+            document.getElementById("output").style.color="indianred"
         }
         
         document.getElementById("output").innerHTML=finalOutput;
