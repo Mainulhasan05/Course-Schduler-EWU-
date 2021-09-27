@@ -7,7 +7,7 @@ function validityCheck(){
     for(let x=0; x<total; x++){
         if(whichOne[index].checked){
             //whichone index 2,5,8
-            if(labObj[i].value=='Day' ||labObj[i].value=='Time'){
+            if(labObj[i].value=='Day' || labObj[j].value=='Time'){
                 alert("Please select Lab"+(x+1)+"-> day and time");
                 return true;
             }
