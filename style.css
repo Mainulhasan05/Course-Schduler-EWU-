@@ -61,3 +61,17 @@ background-color: blue;
 .btn btn-warning{
     text-align: right;
 }
+#output{
+    box-shadow: 10px 10px 40px gray;
+    width: 50%;
+    height: 50%;
+    text-align: center;
+    border-radius: 10px;
+    margin-left: 250px;
+    margin-top: 50px;
+    transition: width 2s, height 4s;
+}
+#output:hover {
+    width: 80%;
+    height: 50%;
+  }
