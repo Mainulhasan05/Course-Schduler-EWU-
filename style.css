@@ -29,7 +29,7 @@
 .div2{
 background-color: blue;
 }
-#btn{
+/* #btn{
     border: none;
     background-color: yellow;
     margin-left: 450px;
@@ -39,7 +39,7 @@ background-color: blue;
     font-weight: 700;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     width: 180px;
-}
+} */
 
 #output{
     font-size: 30px;
@@ -55,11 +55,17 @@ background-color: blue;
     width: 50px;
     height: 25px;
 }
-#removebtn{
-    text-align: right;
+ #removebtn{
+    margin-left: 290px;
+} 
+.btns{
+    width: 100%;
+    float: left;
 }
-.btn btn-warning{
-    text-align: right;
+#btn{
+    width: 50%;
+    height: 50px;
+    float: left;
 }
 #output{
     box-shadow: 10px 10px 40px gray;

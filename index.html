@@ -309,22 +309,37 @@
     </div>
     <!-- New Div-->  <!--Fifth row ended-->
 </section>
-<section>
 
-    <button onclick="btnClicked()" class="btn btn-primary">Submit</button>
+<section class="btns">
+    <div id="btn">
+        <button onclick="btnClicked()" class="btn btn-primary">Submit</button>
 
-    <button onclick="window.print()" class="btn btn-dark">Save PDF</button>
+        <button onclick="window.print()" class="btn btn-dark">Save PDF</button>
+
+        <a href="https://mainulhasan05.github.io/Course-Schduler-EWU-/">
+            <button type="button" class="btn btn-info">Refresh</button>
+        </a>
+    </div>
+    <div id="btn" >
+        <button style="margin-left: 290px;"  onclick="createNew()" class="btn btn-warning">Add new row</button>
+
+            <button id="removebtn" onclick="remove()" type="button" class="btn btn-danger" style="display: none;">Remove Row</button>
+        
+           
 
 
+        
+
+    </div>
+</section>
 
     
-    <button  onclick="createNew()" class="btn btn-warning">Add new row</button>
-    <button id="removebtn" onclick="remove()" type="button" class="btn btn-danger" style="display: none;">Remove Row</button>
-    <a href="https://mainulhasan05.github.io/Course-Schduler-EWU-/">
-        <button type="button" class="btn btn-info">Refresh</button>
-    </a>
+    
 
-</section>
+
+
+</div>
+
     
     
 
