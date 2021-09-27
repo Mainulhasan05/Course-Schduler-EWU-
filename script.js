@@ -268,6 +268,10 @@ function btnClicked(){
         finalOutput+=String(labDayConflict());
         if(finalOutput.length==0){
             finalOutput="Congratulations, No conflicts with this schedule.";
+            document.getElementById("output").style.backgroundColor="greenyellow";
+        }
+        else{
+            document.getElementById("output").style.backgroundColor="255,148,148";
         }
         
         document.getElementById("output").innerHTML=finalOutput;
