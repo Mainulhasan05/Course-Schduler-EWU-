@@ -170,7 +170,6 @@ for(let x=0; x<total-1; x++){
         for(let y=x+1; y<total; y++){
 
             if(whichOne[chky].checked){
-                console.log("for 3 number");
                 if(labObj[dx].value==labObj[dy].value){
                     if((labObj[tx].value==1 &&labObj[ty].value==1)||(labObj[tx].value==1 &&labObj[ty].value==2)){
                         out+="Course"+(x+1)+" and Course"+(y+1)+" Lab time conflicts<br>"
@@ -190,6 +189,14 @@ for(let x=0; x<total-1; x++){
                         
                     }
                     else if((labObj[tx].value==5 &&labObj[ty].value==5)||(labObj[tx].value==5 &&labObj[ty].value==6)){
+                        out+="Course"+(x+1)+" and Course"+(y+1)+" Lab time conflicts<br>"
+                        
+                    }
+                    else if((labObj[tx].value==6 &&labObj[ty].value==6)||(labObj[tx].value==6 &&labObj[ty].value==7)){
+                        out+="Course"+(x+1)+" and Course"+(y+1)+" Lab time conflicts<br>"
+                        
+                    }
+                    else if((labObj[tx].value==7 &&labObj[ty].value==7)||(labObj[tx].value==7 &&labObj[ty].value==6)){
                         out+="Course"+(x+1)+" and Course"+(y+1)+" Lab time conflicts<br>"
                         
                     }
@@ -269,8 +276,10 @@ function btnClicked(){
         if(finalOutput.length==0){
             finalOutput="Congratulations, No conflicts with this schedule.";
             document.getElementById("output").style.backgroundColor="greenyellow";
+            document.getElementById("output").style.color="black"
         }
         else{
+            document.getElementById("output").style.backgroundColor="white";
             document.getElementById("output").style.color="indianred"
         }
         
