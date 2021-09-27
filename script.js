@@ -122,10 +122,10 @@ console.log("3 number check korte aschi");
                         //console.log("Course "+(pp+1)+" no  er sathe Course "+(w+1) +" no er Lab conflict kore");
                         out+="Course"+(pp+1)+"  classtime conflicts with Course"+(w+1) +"  Lab time<br>";
                     }
-                    else if((tm==2 && labObj[t].value==3)||(tm==2 && labObj[t].value==4)){
+                    else if((tm==2 && labObj[t].value==2)||(tm==2 && labObj[t].value==3)||(tm==2 && labObj[t].value==4)){
                         out+="Course"+(pp+1)+"  classtime conflicts with Course"+(w+1) +"  Lab time<br>";
                     }
-                    else if(tm==3 && labObj[t].value==4){
+                    else if((tm==3 && labObj[t].value==4)||(tm==3 && labObj[t].value==3)){
                         out+="Course"+(pp+1)+"  classtime conflicts with Course"+(w+1) +"  Lab time<br>";
                     }
                     else if(tm==4 && labObj[t].value==5){
