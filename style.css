@@ -1,6 +1,9 @@
+.nav{
+  height: 30px;
+}
 .head{
     width: 100%;
-    height: 80px;
+    height: 100px;
     margin-bottom: 0px;
     background-image: url("bc.jpg");
     text-align: center;
