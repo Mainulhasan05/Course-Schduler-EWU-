@@ -342,7 +342,6 @@ function createNew(){
     }
     
 }
-alert("কাজ চলছে");
 function remove(){
     if(total==4){
         var neww=document.getElementById("new1");
